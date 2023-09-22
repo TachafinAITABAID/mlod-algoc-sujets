@@ -18,7 +18,7 @@ void matrix_mult(int64_t matriceResultat[][SIZE],int64_t matrice1[][SIZE], int64
 void matrix_print(int64_t matrice[][SIZE]){
     for (int i = 0; i < SIZE; i++) {
         for (int j = 0; j < SIZE; j++) {
-            printf("%" PRId64 "\t", matrice[i][j]);
+            printf("%" PRIu64 "\t", matrice[i][j]);
         }
         printf("\n");
     }

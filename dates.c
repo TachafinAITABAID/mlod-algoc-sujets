@@ -25,12 +25,28 @@ struct date {
 
 void initialiseDate(struct date *d){
     printf("entrez la date (jour/mois/annee) :");
-    scanf("%hu %d %hu, &(d->jour),(int *)&d->mois, &d->annee );
+    scanf("%d %d %d", &(d->jour),(int *)&d->mois, &d->annee );
 
 }
 void afficheDate( struct date *d){
-    printf("Date : %d / %d / %d \n", &d->jour,(int )&d->mois, &d->annee);
+    printf("Date : %d / %d / %d \n", d->jour,(int)d->mois, d->annee);
 }
+struct date creerDateParCope(){
+    struct date d;
+    initialiseDate(&d);
+    return d;
+}
+
+struct date* newDate(){
+    struct date* d= (struct date*)malloc(sizeof(struct date ));
+    initialiseDate(d);
+    return d;
+
+}
+
+
+
+
 
 int main(void){
     enum Mois mois_de_l_annee=janvier;
@@ -39,5 +55,3 @@ int main(void){
     initialiseDate(&d);
     afficheDate(&d);
 }
-
-
