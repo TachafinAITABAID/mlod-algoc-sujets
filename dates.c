@@ -31,7 +31,7 @@ void initialiseDate(struct date *d){
 void afficheDate( struct date *d){
     printf("Date : %d / %d / %d \n", d->jour,(int)d->mois, d->annee);
 }
-struct date creerDateParCope(){
+struct date creerDateParCopie(){
     struct date d;
     initialiseDate(&d);
     return d;
@@ -41,7 +41,6 @@ struct date* newDate(){
     struct date* d= (struct date*)malloc(sizeof(struct date ));
     initialiseDate(d);
     return d;
-
 }
 
 
